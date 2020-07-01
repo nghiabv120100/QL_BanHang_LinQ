@@ -1,0 +1,98 @@
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.csprojAssemblyReference.cache
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.csproj.ResolveComReference.cache
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.frmReport.resources
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.GUI.frmBieuDo.resources
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.GUI.frmDMHangHoa.resources
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.GUI.frmDMKhachHang.resources
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.GUI.frmDMNhanVien.resources
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.GUI.frmDMLoaiHang.resources
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.GUI.frmHoaDonBanHang.resources
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.GUI.frmLogin.resources
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.GUI.frmMain.resources
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_AdoDotNet.Properties.Resources.resources
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.csproj.GenerateResource.cache
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\RdlCompile.cache
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\RdlCompile.compiled
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_LinQ.csproj.CoreCompileInputs.cache
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_AdoDotNet.exe
+E:\Information Technology\repos\Lập Trình Trên Window\New folder\QL_BanHang_AdoDotNet\QL_BanHang_AdoDotNet\obj\Debug\QL_BanHang_AdoDotNet.pdb
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.csprojAssemblyReference.cache
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.csproj.ResolveComReference.cache
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.frmReport.resources
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.GUI.frmBieuDo.resources
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.GUI.frmDMHangHoa.resources
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.GUI.frmDMKhachHang.resources
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.GUI.frmDMNhanVien.resources
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.GUI.frmDMLoaiHang.resources
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.GUI.frmHoaDonBanHang.resources
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.GUI.frmLogin.resources
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.GUI.frmMain.resources
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.Properties.Resources.resources
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.csproj.GenerateResource.cache
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\RdlCompile.cache
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\RdlCompile.compiled
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.csproj.CoreCompileInputs.cache
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\QL_BanHang_LinQ.exe.config
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\QL_BanHang_LinQ.exe
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\QL_BanHang_LinQ.pdb
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.ReportViewer.Common.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.ReportViewer.Design.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\EnvDTE.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\stdole.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\Microsoft.MSXML.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.csproj.CopyComplete
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.exe
+E:\Information Technology\repos\Lập Trình Trên Window\TestLinQ\QL_BanHang_AdoDotNet\QL_BanHang_LinQ\obj\Debug\QL_BanHang_LinQ.pdb
