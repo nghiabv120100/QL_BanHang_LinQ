@@ -12,24 +12,16 @@ namespace QL_BanHang_LinQ.DB_Layer
 {
     public class Query_DAL:DAL
     {
-        public static bool KiemTraTaiKhoan(string sql)
+        public static bool KiemTraTaiKhoan(TaiKhoan tk)
         {
-            OpenConnection();
-            SqlCommand command = new SqlCommand();
-            command.CommandType = CommandType.Text;
-            command.CommandText = sql;
-            command.Connection = conn;
-            SqlDataReader reader = command.ExecuteReader();
-            if (reader.Read())
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            List<TaiKhoan> dsTK = context.TaiKhoans.ToList();
+            foreach(TaiKhoan x in dsTK)
             {
-                reader.Close();
-                return true;
-            }    
-            else
-            {
-                reader.Close();
-                return false;
-            }    
+                if (x.TenDangNhap == tk.TenDangNhap.Trim() && x.MatKhau == tk.MatKhau.Trim())
+                    return true;
+            }
+            return false;    
             
         }
         public static List<BieuDo> LaySoLieuBieuDo(string sql)
@@ -45,7 +37,6 @@ namespace QL_BanHang_LinQ.DB_Layer
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-
                     BieuDo bd = new BieuDo();
                     bd.MaLoaiHang = reader.GetString(0);
                     bd.TenLoaiHang = reader.GetString(1);

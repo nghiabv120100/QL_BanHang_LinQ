@@ -12,9 +12,8 @@ namespace QL_BanHang_LinQ.BS_Layer
     {
         public static bool CheckTaiKhoan(TaiKhoan tk)
         {
-            string sql = $"select * from dbo.TaiKhoan " +
-                $"Where TenDangNhap=N'{tk.TenDangNhap.Trim()}' and MatKhau=N'{tk.MatKhau.Trim()}'";
-            return Query_DAL.KiemTraTaiKhoan(sql);
+            
+            return Query_DAL.KiemTraTaiKhoan(tk);
         }
     }
 }
