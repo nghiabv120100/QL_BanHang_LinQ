@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -75,13 +76,6 @@
     <Compile Include="DB Layer\DAL.cs" />
     <Compile Include="DB Layer\Query_DAL.cs" />
     <Compile Include="DTO\BieuDo.cs" />
-    <Compile Include="DTO\ChiTietHD.cs" />
-    <Compile Include="DTO\HangHoa.cs" />
-    <Compile Include="DTO\HoaDon.cs" />
-    <Compile Include="DTO\KhachHang.cs" />
-    <Compile Include="DTO\LoaiHang.cs" />
-    <Compile Include="DTO\NhanVien.cs" />
-    <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="frmReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +141,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QL_BanHang.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QL_BanHang1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QL_BanHang.dbml</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmReport.resx">
       <DependentUpon>frmReport.cs</DependentUpon>
@@ -196,6 +195,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QL_BanHang.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QL_BanHang1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QL_BanHang.dbml.layout">
+      <DependentUpon>QL_BanHang.dbml</DependentUpon>
+    </None>
     <None Include="QL_BanHang.xsc">
       <DependentUpon>QL_BanHang.xsd</DependentUpon>
     </None>
@@ -260,6 +267,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

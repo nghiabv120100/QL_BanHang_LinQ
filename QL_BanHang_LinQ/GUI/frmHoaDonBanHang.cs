@@ -197,7 +197,7 @@ namespace QL_BanHang_LinQ.GUI
                 {
                     cmbMaNhanVien.Text = hd.MaNhanVien;
                     cmbMaKhach.Text = hd.MaKhachHang;
-                    dtpNgayban.Value = hd.NgayBan;
+                    dtpNgayban.Value = (DateTime)hd.NgayBan;
                     txtTongtien.Text = hd.TongTien.ToString();
                 }
             }

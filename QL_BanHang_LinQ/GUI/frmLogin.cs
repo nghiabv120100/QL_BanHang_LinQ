@@ -21,8 +21,9 @@ namespace QL_BanHang_LinQ.GUI
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            
             TaiKhoan tk = new TaiKhoan();
-            tk.TenTaiKhoan = txtTenDangNhap.Text;
+            tk.TenDangNhap = txtTenDangNhap.Text;
             tk.MatKhau = txtMatKhau.Text;
             bool res = BLL_TaiKhoan.CheckTaiKhoan(tk);
             if (res)
