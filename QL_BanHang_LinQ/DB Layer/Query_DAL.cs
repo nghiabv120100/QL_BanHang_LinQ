@@ -164,6 +164,38 @@ namespace QL_BanHang_LinQ.DB_Layer
             }
             
         }
+        #region Update
+        public static int UpdateHangHoa(HangHoa hh)
+        {
+            try
+            {
+                QL_BanHangDataContext context = new QL_BanHangDataContext();
+                HangHoa hanghoa = context.HangHoas.FirstOrDefault(x => x.MaHang.Trim() == hh.MaHang.Trim());
+                hanghoa = hh;
+                context.SubmitChanges();
+                return 1;
+            }
+            catch
+            {
+                return -1;
+            }
+        }
+        public static int UpdateHoaDonBanHang(HoaDon hd)
+        {
+            return 1;
+        }
+        public static int UpdateKhachHang(KhachHang kh)
+        {
+            return 1;
+        }
+        public static int UpdateLoaiHang(LoaiHang lh)
+        {
+            return 1;
+        }
+        public static int UpdateNhanVien(NhanVien nv)
+        {
+            return 1;
+        }
         public static int UpdateData(string sql)
         {
             try
@@ -182,7 +214,7 @@ namespace QL_BanHang_LinQ.DB_Layer
                 return -1;
             }
         }
-
+        #endregion
         public static int DeleteData(string sql)
         {
             try

@@ -56,13 +56,8 @@ namespace QL_BanHang_LinQ.BS_Layer
   GhiChu ,ThoiGianBaoHanh, XuatXu , LoaiHang 
          */
         public static int UpdateHangHoa(HangHoa HH)
-        {
-            string sql = $"Update dbo.HangHoa " +
-                $"Set TenHang=N'{HH.TenHang}',SoLuong={HH.SoLuong}," +
-                $"DonGiaNhap='{HH.DonGiaNhap}',DonGiaBan='{HH.DonGiaBan}',Anh=N'{HH.Anh}',GhiChu='{HH.GhiChu}'," +
-                $"ThoiGianBaoHanh={HH.ThoiGianBaoHanh},XuatXu=N'{HH.XuatXu}',LoaiHang='{HH.LoaiHang}' " +
-                $"Where MaHang='{HH.MaHang.Trim()}'";
-            return Query_DAL.UpdateData(sql);
+        {           
+            return Query_DAL.UpdateHangHoa(HH);
         }
         public static int DeleteHangHoa(string MaHH)
         {
