@@ -11,7 +11,7 @@ using System.Security.AccessControl;
 
 namespace QL_BanHang_LinQ.DB_Layer
 {
-    public class Query_DAL:DAL
+    public class Query_DAL
     {
         public static bool KiemTraTaiKhoan(TaiKhoan tk)
         {
@@ -25,38 +25,33 @@ namespace QL_BanHang_LinQ.DB_Layer
             return false;    
             
         }
-        #region Lấy Dữ Liệu
-        public static List<BieuDo> LaySoLieuBieuDo(string sql)
+        public static List<HangHoa> FindHangHoa(HangHoa hh)
         {
-            try
+            List<HangHoa> dsHH = new List<HangHoa>();
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            dsHH = context.HangHoas.Where(x => x.MaHang
+            .Contains(hh.MaHang)&&x.TenHang.Contains(hh.TenHang)&&x.LoaiHang.Contains(hh.LoaiHang)).ToList();
+            return dsHH;
+        }
+        #region Lấy Dữ Liệu
+        
+        public static List<BieuDo> LaySoLieuBieuDo(DateTime dateStart, DateTime dateEnd)
+        {
+            List<BieuDo> dsBieuDo=new List<BieuDo>();
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            List<LaySoLieuBieuDoResult> dsSoLieu = context.LaySoLieuBieuDo(dateStart, dateEnd).ToList();
+            foreach(LaySoLieuBieuDoResult x in dsSoLieu)
             {
-                List<BieuDo> dsSL = new List<BieuDo>();//Danh sách số liệu
-                OpenConnection();
-                SqlCommand command = new SqlCommand();
-                command.CommandType = CommandType.Text;
-                command.CommandText = sql;
-                command.Connection = conn;
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    BieuDo bd = new BieuDo();
-                    bd.MaLoaiHang = reader.GetString(0);
-                    bd.TenLoaiHang = reader.GetString(1);
-                    bd.SoLuong = reader.GetInt32(2);
-                    bd.TongTien = reader.GetInt32(3);
-                    bd.PhanTram = float.Parse(reader.GetDouble(4).ToString());
-                    bd.PhanTramTongTien = float.Parse(reader.GetDouble(5).ToString());
-                    dsSL.Add(bd);
-                }
-                reader.Close();
-                return dsSL;
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
-            
+                BieuDo bd = new BieuDo();
+                bd.MaLoaiHang = x.MaLoaiHang;
+                bd.TenLoaiHang = x.TenLoaiHang;
+                bd.PhanTram = float.Parse(x.T.ToString());
+                bd.SoLuong = (int)x.SL;
+                bd.PhanTramTongTien = float.Parse(x.PTTongTien.ToString());
+                bd.TongTien = (int)x.TT;
+                dsBieuDo.Add(bd);
+            }    
+            return dsBieuDo;
         }
         public static List<NhanVien> LayToanBoNhanVien()
         {
@@ -138,18 +133,11 @@ namespace QL_BanHang_LinQ.DB_Layer
             }
             
         }
-        public static DataTable GetDataToTable(string sql)
+        public static List<GetDataToTableResult> LayDuLieuLenBang(string MaHD)
         {
-            OpenConnection();
-            SqlDataAdapter dap = new SqlDataAdapter(); //Định nghĩa đối tượng thuộc lớp SqlDataAdapter
-            //Tạo đối tượng thuộc lớp SqlCommand
-            dap.SelectCommand = new SqlCommand();
-            dap.SelectCommand.Connection =conn; //Kết nối cơ sở dữ liệu
-            dap.SelectCommand.CommandText = sql; //Lệnh SQL
-            //Khai báo đối tượng table thuộc lớp DataTable
-            DataTable table = new DataTable();
-            dap.Fill(table);
-            return table;
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            List<GetDataToTableResult> dsDL = context.GetDataToTable(MaHD).ToList();
+            return dsDL;
         }
         public static List<ChiTietHD> LayToanBoDanhSachChiTietHD()
         {
@@ -282,24 +270,7 @@ namespace QL_BanHang_LinQ.DB_Layer
             }
             return -1;
         }
-        //public static int UpdateData(string sql)
-        //{
-        //    try
-        //    {
-        //        OpenConnection();
-        //        SqlCommand cmd = new SqlCommand();
-        //        cmd.CommandType = CommandType.Text;
-        //        cmd.CommandText = sql;
-        //        cmd.Connection = conn;
-        //        int res = cmd.ExecuteNonQuery();
-        //        return res;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //        return -1;
-        //    }
-        //}
+
         #endregion
         #region Delete
         public static int DeleteHangHoa(string Ma)

@@ -48,7 +48,7 @@ namespace QL_BanHang_LinQ.GUI
             dgvHangHoa.DataSource = dsHH;
             dgvHangHoa.AllowUserToAddRows = false;
             dgvHangHoa.EditMode = DataGridViewEditMode.EditProgrammatically;
-
+            dgvHangHoa.Columns["LoaiHang1"].Visible = false;
         }
         private void HienThiDanhSachLoaiHang()
         {
@@ -232,7 +232,7 @@ namespace QL_BanHang_LinQ.GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string sql;
+       
             if ((txtMaHang.Text == "") && (txtTenHang.Text == "") && (cmbMaLoaiHang.Text == ""))
             {
                 MessageBox.Show("Bạn hãy nhập điều kiện tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -244,11 +244,11 @@ namespace QL_BanHang_LinQ.GUI
             
             HH.LoaiHang = cmbMaLoaiHang.Text;
 
-            DataTable tblH = BLL_HangHoa.FindHangHoa(HH);
-            if (tblH.Rows.Count == 0)
+            List<HangHoa> result = BLL_HangHoa.FindHangHoa(HH);
+            if (result.Count == 0)
                 MessageBox.Show("Không có bản ghi thoả mãn điều kiện tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else MessageBox.Show("Có " + tblH.Rows.Count + "  bản ghi thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dgvHangHoa.DataSource = tblH;
+            else MessageBox.Show("Có " + result.Count + "  bản ghi thoả mãn điều kiện!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dgvHangHoa.DataSource = result;
             ResetValues();
         }
 

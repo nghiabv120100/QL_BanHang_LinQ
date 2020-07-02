@@ -67,17 +67,18 @@ namespace QL_BanHang_LinQ.GUI
         // Chi tiết sản phẩm của hoá đơn theo mã hoá đơn
         private void HienThiChiTietHoaDonBan(string MaHD)
         {
-            DataTable dtlCTHD;
-            dtlCTHD = BLL_HoaDonBanHang.GetDataToTable(MaHD);
-            
+            List<GetDataToTableResult> dtlCTHD;
+            dtlCTHD = BLL_HoaDonBanHang.LayDuLieuLenBang(MaHD);
+
             dgvHDBanHang.DataSource = dtlCTHD;
             dgvHDBanHang.AllowUserToAddRows = false;
             dgvHDBanHang.EditMode = DataGridViewEditMode.EditProgrammatically;           
             int Price = 0;
-            for (int i=0;i<dtlCTHD.Rows.Count;i++)
+            foreach(GetDataToTableResult item in dtlCTHD)
             {
-                Price += int.Parse(dtlCTHD.Rows[i][5].ToString());
-            }
+           
+                Price += int.Parse(item.ThanhTien);
+            }    
             BLL_HoaDonBanHang.UpdataHoaDonBanHang(txtMaHDBan.Text.Trim(), Price);
             txtTongtien.Text = Price.ToString();
         

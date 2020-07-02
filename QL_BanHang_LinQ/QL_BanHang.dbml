@@ -80,4 +80,27 @@
       <Association Name="NhanVien_HoaDon" Member="HoaDons" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="HoaDon" />
     </Type>
   </Table>
+  <Function Name="dbo.LaySoLieuBieuDo" Method="LaySoLieuBieuDo">
+    <Parameter Name="startDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="endDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="LaySoLieuBieuDoResult">
+      <Column Name="MaLoaiHang" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenLoaiHang" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="T" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PTTongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetDataToTable" Method="GetDataToTable">
+    <Parameter Name="MaHD" Parameter="maHD" Type="System.String" DbType="Char(100)" />
+    <ElementType Name="GetDataToTableResult">
+      <Column Name="MaHang" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TenHang" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="GiamGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

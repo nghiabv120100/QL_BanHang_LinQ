@@ -138,6 +138,20 @@ namespace QL_BanHang_LinQ
 				return this.GetTable<NhanVien>();
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.LaySoLieuBieuDo")]
+		public ISingleResult<LaySoLieuBieuDoResult> LaySoLieuBieuDo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> startDate, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="DateTime")] System.Nullable<System.DateTime> endDate)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), startDate, endDate);
+			return ((ISingleResult<LaySoLieuBieuDoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataToTable")]
+		public ISingleResult<GetDataToTableResult> GetDataToTable([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MaHD", DbType="Char(100)")] string maHD)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maHD);
+			return ((ISingleResult<GetDataToTableResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChiTietHD")]
@@ -1756,6 +1770,238 @@ namespace QL_BanHang_LinQ
 		{
 			this.SendPropertyChanging();
 			entity.NhanVien = null;
+		}
+	}
+	
+	public partial class LaySoLieuBieuDoResult
+	{
+		
+		private string _MaLoaiHang;
+		
+		private string _TenLoaiHang;
+		
+		private System.Nullable<int> _SL;
+		
+		private System.Nullable<int> _TT;
+		
+		private System.Nullable<double> _T;
+		
+		private System.Nullable<double> _PTTongTien;
+		
+		public LaySoLieuBieuDoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoaiHang", DbType="Char(20) NOT NULL", CanBeNull=false)]
+		public string MaLoaiHang
+		{
+			get
+			{
+				return this._MaLoaiHang;
+			}
+			set
+			{
+				if ((this._MaLoaiHang != value))
+				{
+					this._MaLoaiHang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenLoaiHang", DbType="NVarChar(200)")]
+		public string TenLoaiHang
+		{
+			get
+			{
+				return this._TenLoaiHang;
+			}
+			set
+			{
+				if ((this._TenLoaiHang != value))
+				{
+					this._TenLoaiHang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SL", DbType="Int")]
+		public System.Nullable<int> SL
+		{
+			get
+			{
+				return this._SL;
+			}
+			set
+			{
+				if ((this._SL != value))
+				{
+					this._SL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TT", DbType="Int")]
+		public System.Nullable<int> TT
+		{
+			get
+			{
+				return this._TT;
+			}
+			set
+			{
+				if ((this._TT != value))
+				{
+					this._TT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T", DbType="Float")]
+		public System.Nullable<double> T
+		{
+			get
+			{
+				return this._T;
+			}
+			set
+			{
+				if ((this._T != value))
+				{
+					this._T = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PTTongTien", DbType="Float")]
+		public System.Nullable<double> PTTongTien
+		{
+			get
+			{
+				return this._PTTongTien;
+			}
+			set
+			{
+				if ((this._PTTongTien != value))
+				{
+					this._PTTongTien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetDataToTableResult
+	{
+		
+		private string _MaHang;
+		
+		private string _TenHang;
+		
+		private System.Nullable<int> _SoLuong;
+		
+		private string _DonGia;
+		
+		private System.Nullable<int> _GiamGia;
+		
+		private string _ThanhTien;
+		
+		public GetDataToTableResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHang", DbType="Char(20) NOT NULL", CanBeNull=false)]
+		public string MaHang
+		{
+			get
+			{
+				return this._MaHang;
+			}
+			set
+			{
+				if ((this._MaHang != value))
+				{
+					this._MaHang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenHang", DbType="NVarChar(200)")]
+		public string TenHang
+		{
+			get
+			{
+				return this._TenHang;
+			}
+			set
+			{
+				if ((this._TenHang != value))
+				{
+					this._TenHang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
+		public System.Nullable<int> SoLuong
+		{
+			get
+			{
+				return this._SoLuong;
+			}
+			set
+			{
+				if ((this._SoLuong != value))
+				{
+					this._SoLuong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonGia", DbType="Char(20)")]
+		public string DonGia
+		{
+			get
+			{
+				return this._DonGia;
+			}
+			set
+			{
+				if ((this._DonGia != value))
+				{
+					this._DonGia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GiamGia", DbType="Int")]
+		public System.Nullable<int> GiamGia
+		{
+			get
+			{
+				return this._GiamGia;
+			}
+			set
+			{
+				if ((this._GiamGia != value))
+				{
+					this._GiamGia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Char(20)")]
+		public string ThanhTien
+		{
+			get
+			{
+				return this._ThanhTien;
+			}
+			set
+			{
+				if ((this._ThanhTien != value))
+				{
+					this._ThanhTien = value;
+				}
+			}
 		}
 	}
 }

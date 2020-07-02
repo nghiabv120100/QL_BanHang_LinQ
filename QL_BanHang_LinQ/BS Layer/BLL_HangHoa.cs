@@ -17,16 +17,10 @@ namespace QL_BanHang_LinQ.BS_Layer
         {
             return Query_DAL.LayToanBoHangHoa();
         }
-        public static DataTable FindHangHoa(HangHoa HH)
+        public static List<HangHoa> FindHangHoa(HangHoa HH)
         {
-            string sql = "SELECT * from dbo.HangHoa WHERE 1=1";
-            if (HH.MaHang != "")
-                sql += " AND MaHang LIKE '%" + HH.MaHang.Trim() + "%'";
-            if (HH.TenHang != "")
-                sql += " AND TenHang LIKE N'%" + HH.TenHang.Trim() + "%'";
-            if (HH.LoaiHang != "")
-                sql += " AND LoaiHang LIKE '%" + HH.LoaiHang.Trim() + "%'";
-            return Query_DAL.GetDataToTable(sql);
+
+            return Query_DAL.FindHangHoa(HH);
         }
         public static int InsertHangHoa(HangHoa HH)
         {

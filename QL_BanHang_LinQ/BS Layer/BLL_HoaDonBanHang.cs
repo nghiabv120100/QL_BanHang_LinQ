@@ -93,16 +93,12 @@ namespace QL_BanHang_LinQ.BS_Layer
         {
             return Query_DAL.LayToanBoDanhSachChiTietHD();
         }
-        public static DataTable GetDataToTable(string MaHD)
+        public static List<GetDataToTableResult> LayDuLieuLenBang(string MaHD)
         {
-            
-            string sql = "Select a.MaHang,b.TenHang,a.SoLuong,a.DonGia,a.GiamGia,a.ThanhTien " +
-                "from dbo.ChiTietHD as a,HangHoa as b " +
-                $"where MaHoaDon = '{MaHD}' and a.MaHang=b.MaHang";
-            return Query_DAL.GetDataToTable(sql);
+            return Query_DAL.LayDuLieuLenBang(MaHD);
         }
         //
-       
+
         //Delete HoaDon
         public static int DeleteHoaDon(string MaHD)
         {

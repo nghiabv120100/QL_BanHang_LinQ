@@ -31,8 +31,8 @@ namespace QL_BanHang_LinQ.GUI
         }
         private void LoadBieuDoSoLuong(DateTime dateStart,DateTime dateEnd)
         {
-            List<BieuDo> dsSL = new List<BieuDo>();
-            chartSoLuong.DataSource = BLL_BieuDo.LaySoLieuBieuDo(dateStart, dateEnd);
+            List<BieuDo> dsSL = BLL_BieuDo.LaySoLieuBieuDo(dateStart, dateEnd); ;
+            chartSoLuong.DataSource = dsSL;
             chartSoLuong.Series[0].XValueMember = "TenLoaiHang";
             chartSoLuong.Series[0].XValueType = ChartValueType.String;
             chartSoLuong.Series[0].YValueMembers = "SoLuong";
