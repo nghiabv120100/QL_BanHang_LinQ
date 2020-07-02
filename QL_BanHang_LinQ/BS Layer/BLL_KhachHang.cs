@@ -41,12 +41,12 @@ namespace QL_BanHang_LinQ.BS_Layer
         }
         public static int UpdateKhachHang(KhachHang kh)
         {
-            string sql = $"Update dbo.KhachHang " +
-                $"Set TenKhachHang=N'{kh.TenKhachHang}',DiaChi=N'{kh.DiaChi}'," +
-                $"TongChiTieu={kh.TongChiTieu},DienThoai='{kh.DienThoai}',Email=N'{kh.Email}',NgaySinh='{kh.NgaySinh}'," +
-                $"GioiTinh=N'{kh.GioiTinh}' " +
-                $"Where MaKhachHang='{kh.MaKhachHang}'";
-            return Query_DAL.UpdateData(sql);
+            //string sql = $"Update dbo.KhachHang " +
+            //    $"Set TenKhachHang=N'{kh.TenKhachHang}',DiaChi=N'{kh.DiaChi}'," +
+            //    $"TongChiTieu={kh.TongChiTieu},DienThoai='{kh.DienThoai}',Email=N'{kh.Email}',NgaySinh='{kh.NgaySinh}'," +
+            //    $"GioiTinh=N'{kh.GioiTinh}' " +
+            //    $"Where MaKhachHang='{kh.MaKhachHang}'";
+            return Query_DAL.UpdateKhachHang(kh);
         }
         public static int DeleteKhachHang(string MaKH)
         {

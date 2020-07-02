@@ -36,9 +36,9 @@ namespace QL_BanHang_LinQ.GUI
             dgvNhanVien.Columns[2].HeaderText = "Địa chỉ";
             dgvNhanVien.Columns[3].HeaderText = "Điện thoại";
             dgvNhanVien.Columns[4].HeaderText = "Giới tính";
-            dgvNhanVien.Columns[5].HeaderText = "Ngày sinh";
-            dgvNhanVien.Columns[6].HeaderText = "Chức vụ";
-            dgvNhanVien.Columns[7].HeaderText = "Lương";
+            dgvNhanVien.Columns[5].HeaderText = "Chức vụ";
+            dgvNhanVien.Columns[6].HeaderText = "Lương";
+            dgvNhanVien.Columns[7].HeaderText = "Ngày sinh";
         }
         private void HienThiDanhSachNhanVien()
         {
@@ -90,11 +90,11 @@ namespace QL_BanHang_LinQ.GUI
             int indexRow = dgvNhanVien.SelectedRows[0].Index;
             txtMaNhanVien.Text = dgvNhanVien[0, indexRow].Value.ToString();
             txtTenNhanVien.Text = dgvNhanVien[1, indexRow].Value.ToString();
-            txtChucVu.Text = dgvNhanVien[6, indexRow].Value.ToString();
+            txtChucVu.Text = dgvNhanVien[5, indexRow].Value.ToString();
             txtDiaChi.Text = dgvNhanVien[2, indexRow].Value.ToString();
             mtbDienThoai.Text = dgvNhanVien[3, indexRow].Value.ToString();
-            txtLuong.Text = dgvNhanVien[7, indexRow].Value.ToString();
-            dtpNgaySinh.Value = (DateTime)dgvNhanVien[5, indexRow].Value;
+            txtLuong.Text = dgvNhanVien[6, indexRow].Value.ToString();
+            dtpNgaySinh.Value = (DateTime)dgvNhanVien[7, indexRow].Value;
             chkNam.Checked = false;
             chkNu.Checked = false;
             if (dgvNhanVien[4, indexRow].Value.ToString() == "Nam")

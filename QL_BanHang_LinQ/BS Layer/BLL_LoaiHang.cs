@@ -45,10 +45,7 @@ namespace QL_BanHang_LinQ.BS_Layer
         
         public static int UpdateLoaiHang(LoaiHang LH)
         {
-            string sql = $"Update dbo.LoaiHang " +
-                $"set TenLoaiHang=N'{LH.TenLoaiHang}'" +               
-                $"Where MaLoaiHang='{LH.MaLoaiHang}'";
-            return Query_DAL.UpdateData(sql);
+            return Query_DAL.UpdateLoaiHang(LH);
         }
         
     }

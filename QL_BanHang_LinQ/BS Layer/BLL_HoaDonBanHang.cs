@@ -129,6 +129,8 @@ namespace QL_BanHang_LinQ.BS_Layer
                 $"set TongTien = {Price} Where MaHoaDon='{MaHD}'";
             int res = Query_DAL.UpdateData(sql);
             return res;
+           // HoaDon HD = new HoaDon();
+            
         }
         //Insert HoaDon
         public static int InsertHoaDonBanHang(HoaDon hd,ChiTietHD CTHD)

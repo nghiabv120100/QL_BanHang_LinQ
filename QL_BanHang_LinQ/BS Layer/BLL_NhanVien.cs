@@ -46,12 +46,8 @@ namespace QL_BanHang_LinQ.BS_Layer
         }
         public static int UpdateNhanVien(NhanVien nv)
         {
-            string sql = $"Update dbo.NhanVien " +
-                $"set TenNhanVien=N'{nv.TenNhanVien}'," +
-                $"DiaChi=N'{nv.DiaChi}',DienThoai='{nv.DienThoai}',GioiTinh=N'{nv.GioiTinh}',ChucVu=N'{nv.ChucVu}'," +
-                $"Luong={nv.Luong},NgaySinh='{nv.NgaySinh}'" +
-                $"Where MaNhanVien='{nv.MaNhanVien}'";
-            return Query_DAL.UpdateData(sql);
+            
+            return Query_DAL.UpdateNhanVien(nv);
         }
         public static int DeleteNhanVien(string MaNhanVien)
         {

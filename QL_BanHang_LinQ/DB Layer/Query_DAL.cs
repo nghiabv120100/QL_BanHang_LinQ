@@ -7,6 +7,7 @@ using QL_BanHang_LinQ.DTO;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Security.AccessControl;
 
 namespace QL_BanHang_LinQ.DB_Layer
 {
@@ -138,6 +139,7 @@ namespace QL_BanHang_LinQ.DB_Layer
         }
         public static DataTable GetDataToTable(string sql)
         {
+            OpenConnection();
             SqlDataAdapter dap = new SqlDataAdapter(); //Định nghĩa đối tượng thuộc lớp SqlDataAdapter
             //Tạo đối tượng thuộc lớp SqlCommand
             dap.SelectCommand = new SqlCommand();
@@ -171,7 +173,15 @@ namespace QL_BanHang_LinQ.DB_Layer
             {
                 QL_BanHangDataContext context = new QL_BanHangDataContext();
                 HangHoa hanghoa = context.HangHoas.FirstOrDefault(x => x.MaHang.Trim() == hh.MaHang.Trim());
-                hanghoa = hh;
+                hanghoa.TenHang = hh.TenHang;
+                hanghoa.SoLuong = hh.SoLuong;
+                hanghoa.DonGiaNhap = hh.DonGiaNhap;
+                hanghoa.DonGiaBan = hh.DonGiaBan;
+                hanghoa.Anh = hh.Anh;
+                hanghoa.GhiChu = hh.GhiChu;
+                hanghoa.ThoiGianBaoHanh = hh.ThoiGianBaoHanh;
+                hanghoa.XuatXu = hh.XuatXu;
+                hanghoa.LoaiHang = hh.LoaiHang;
                 context.SubmitChanges();
                 return 1;
             }
@@ -186,15 +196,73 @@ namespace QL_BanHang_LinQ.DB_Layer
         }
         public static int UpdateKhachHang(KhachHang kh)
         {
-            return 1;
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            KhachHang khachhang = context.KhachHangs.FirstOrDefault(x => x.MaKhachHang.Trim() == kh.MaKhachHang.Trim());
+            if (khachhang != null)
+            {
+                try
+                {
+                    khachhang.TenKhachHang = kh.TenKhachHang;
+                    khachhang.TongChiTieu = kh.TongChiTieu;
+                    khachhang.GioiTinh = kh.GioiTinh;
+                    khachhang.DiaChi = kh.DiaChi;
+                    khachhang.DienThoai = kh.DienThoai;
+                    khachhang.Email = kh.Email;
+                    khachhang.NgaySinh = kh.NgaySinh;
+                    context.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            return -1;
+
         }
         public static int UpdateLoaiHang(LoaiHang lh)
         {
-            return 1;
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            LoaiHang loaihang = context.LoaiHangs.FirstOrDefault(x => x.MaLoaiHang.Trim() == lh.MaLoaiHang.Trim());
+            if (loaihang != null)
+            {
+                try
+                {
+                    loaihang.TenLoaiHang = lh.TenLoaiHang;
+                    context.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            return -1;
         }
         public static int UpdateNhanVien(NhanVien nv)
         {
-            return 1;
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            NhanVien nhanvien = context.NhanViens.FirstOrDefault
+                (x => x.MaNhanVien.Trim() == nv.MaNhanVien.Trim());
+            if (nhanvien != null)
+            {
+                try
+                {
+                    nhanvien.TenNhanVien = nv.TenNhanVien;
+                    nhanvien.DiaChi = nv.DiaChi;
+                    nhanvien.NgaySinh = nv.NgaySinh;
+                    nhanvien.Luong = nv.Luong;
+                    nhanvien.DienThoai = nv.DienThoai;
+                    nhanvien.ChucVu = nv.ChucVu;
+                    context.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            return -1;
         }
         public static int UpdateData(string sql)
         {
