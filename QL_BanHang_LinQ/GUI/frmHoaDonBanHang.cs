@@ -360,7 +360,15 @@ namespace QL_BanHang_LinQ.GUI
             DialogResult dlr = MessageBox.Show("Bạn có chắn chắn muốn xoá không?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
             if (dlr == DialogResult.Cancel || dlr == DialogResult.No)
                 return;
-            BLL_HoaDonBanHang.DeleteHoaDon(cmbMahoadon.Text.Trim());
+            int  res =BLL_HoaDonBanHang.DeleteHoaDon(cmbMahoadon.Text.Trim());
+            if (res > 0)
+            {
+                MessageBox.Show("Huỷ hoá đơn thành công");
+            }    
+            else
+            {
+                MessageBox.Show("Huỷ hoá đơn thất bại");
+            }                
             HienThiLenCombobox();
             cmbMahoadon.SelectedIndex = -1;
             HienThiChiTietHoaDonBan("");

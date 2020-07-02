@@ -51,9 +51,8 @@ namespace QL_BanHang_LinQ.BS_Layer
         }
         public static int DeleteNhanVien(string MaNhanVien)
         {
-            string sql = $"Delete from dbo.NhanVien " +
-                $"Where MaNhanVien='{MaNhanVien}'";
-            return Query_DAL.DeleteData(sql);
+
+            return Query_DAL.DeleteNhanVien(MaNhanVien);
         }
     }
 }

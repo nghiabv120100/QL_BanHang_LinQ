@@ -106,28 +106,21 @@ namespace QL_BanHang_LinQ.BS_Layer
         //Delete HoaDon
         public static int DeleteHoaDon(string MaHD)
         {
-            string sql = "Delete from dbo.ChiTietHD " +
-                $"Where MaHoaDon='{MaHD}'";
-            Query_DAL.DeleteData(sql);// Xoá chi tiết HD
-            sql = "Delete from dbo.HoaDon " +
-                $"Where MaHoaDon='{MaHD}'";
-            int res =Query_DAL.DeleteData(sql);
-            return res;
+            return Query_DAL.DeleteHoaDon(MaHD);
         }
         public static int DeleteChiTietHD(string MaHD,string MaHH)
         {
 
-            string sql = "Delete from dbo.ChiTietHD " +
-               $"Where MaHang='{MaHH.Trim()}' and  MaHoaDon='{MaHD.Trim()}' ";        
-            int res = Query_DAL.DeleteData(sql);
+            int res = Query_DAL.DeleteChiTietHD(MaHD, MaHH);
             return res;
         }
         //Updata HoaDon
         public static int UpdataHoaDonBanHang(string MaHD,int Price)
         {
-            string sql = "Update  dbo.HoaDon " +
-                $"set TongTien = {Price} Where MaHoaDon='{MaHD}'";
-            int res = Query_DAL.UpdateData(sql);
+            HoaDon hd = new HoaDon();
+            hd.MaHoaDon = MaHD;
+            hd.TongTien = Price;       
+            int res = Query_DAL.UpdateHoaDonBanHang(hd);
             return res;
            // HoaDon HD = new HoaDon();
             

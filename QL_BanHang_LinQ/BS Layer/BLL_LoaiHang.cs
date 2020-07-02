@@ -38,9 +38,7 @@ namespace QL_BanHang_LinQ.BS_Layer
         }
         public static int DeleteLoaiHang(string MaLoaiHang)
         {
-            string sql = $"Delete from dbo.LoaiHang " +
-                $"Where MaLoaiHang='{MaLoaiHang}'";
-            return Query_DAL.DeleteData(sql);
+            return Query_DAL.DeleteLoaiHang(MaLoaiHang);
         }
         
         public static int UpdateLoaiHang(LoaiHang LH)

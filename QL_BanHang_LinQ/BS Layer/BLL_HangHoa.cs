@@ -61,9 +61,7 @@ namespace QL_BanHang_LinQ.BS_Layer
         }
         public static int DeleteHangHoa(string MaHH)
         {
-            string sql = "Delete from dbo.HangHoa " +
-                $"Where MaHang='{MaHH}'";
-            return Query_DAL.DeleteData(sql);
+            return Query_DAL.DeleteHangHoa(MaHH);
         }
     }
 }

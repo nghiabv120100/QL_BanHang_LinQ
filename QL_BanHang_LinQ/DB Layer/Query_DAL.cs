@@ -25,6 +25,7 @@ namespace QL_BanHang_LinQ.DB_Layer
             return false;    
             
         }
+        #region Lấy Dữ Liệu
         public static List<BieuDo> LaySoLieuBieuDo(string sql)
         {
             try
@@ -166,6 +167,7 @@ namespace QL_BanHang_LinQ.DB_Layer
             }
             
         }
+        #endregion
         #region Update
         public static int UpdateHangHoa(HangHoa hh)
         {
@@ -192,7 +194,23 @@ namespace QL_BanHang_LinQ.DB_Layer
         }
         public static int UpdateHoaDonBanHang(HoaDon hd)
         {
-            return 1;
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            HoaDon hoadon = context.HoaDons.FirstOrDefault
+                (x => x.MaHoaDon.Trim() == hd.MaHoaDon.Trim());
+            if (hoadon != null)
+            {
+                try
+                {
+                    hoadon.TongTien = hd.TongTien;
+                    context.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            return -1;
         }
         public static int UpdateKhachHang(KhachHang kh)
         {
@@ -264,25 +282,151 @@ namespace QL_BanHang_LinQ.DB_Layer
             }
             return -1;
         }
-        public static int UpdateData(string sql)
-        {
-            try
-            {
-                OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = sql;
-                cmd.Connection = conn;
-                int res = cmd.ExecuteNonQuery();
-                return res;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return -1;
-            }
-        }
+        //public static int UpdateData(string sql)
+        //{
+        //    try
+        //    {
+        //        OpenConnection();
+        //        SqlCommand cmd = new SqlCommand();
+        //        cmd.CommandType = CommandType.Text;
+        //        cmd.CommandText = sql;
+        //        cmd.Connection = conn;
+        //        int res = cmd.ExecuteNonQuery();
+        //        return res;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //        return -1;
+        //    }
+        //}
         #endregion
+        #region Delete
+        public static int DeleteHangHoa(string Ma)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            HangHoa deleteHangHoa = context.HangHoas.
+                FirstOrDefault(x => x.MaHang.Trim() == Ma.Trim());
+            if (deleteHangHoa != null)
+            {
+                try
+                {
+                    context.HangHoas.DeleteOnSubmit(deleteHangHoa);
+                    context.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            return -1;
+        }
+        public static int DeleteChiTietHD(string MaHD,string MaHH)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            ChiTietHD deleteChiTietHD = context.ChiTietHDs.
+                FirstOrDefault(x => x.MaHoaDon.Trim() == MaHD.Trim() && x.MaHang.Trim()==MaHH.Trim());
+            if (deleteChiTietHD != null)
+            {
+                try
+                {
+                    context.ChiTietHDs.DeleteOnSubmit(deleteChiTietHD);
+                    context.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            return -1;
+        }
+        public static int DeleteHoaDon(string MaHD)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            List<ChiTietHD> dsCTHD = context.ChiTietHDs.Where(x => x.MaHoaDon.Trim() == MaHD.Trim()).ToList();
+            if (dsCTHD != null)
+            {
+                try
+                {
+                    context.ChiTietHDs.DeleteAllOnSubmit(dsCTHD);
+                    context.SubmitChanges();
+                    HoaDon hoadon = context.HoaDons.FirstOrDefault(x => x.MaHoaDon.Trim() == MaHD.Trim());
+                    context.HoaDons.DeleteOnSubmit(hoadon);
+                    context.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            return -1;
+        }
+        public static int DeleteKhachHang(string MaKH)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            KhachHang deleteKhachHang = context.KhachHangs.
+                FirstOrDefault(x => x.MaKhachHang.Trim() == MaKH.Trim());
+              
+            if (deleteKhachHang != null)
+            {
+                try
+                {
+                    context.KhachHangs.DeleteOnSubmit(deleteKhachHang);
+                    context.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            return -1;
+        }
+        public static int DeleteLoaiHang(string MaLH)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            LoaiHang deleteLoaiHang = context.LoaiHangs.
+                FirstOrDefault(x => x.MaLoaiHang.Trim() == MaLH.Trim());
+
+            if (deleteLoaiHang != null)
+            {
+                try
+                {
+                    context.LoaiHangs.DeleteOnSubmit(deleteLoaiHang);
+                    context.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            return -1;
+        }
+        public static int DeleteNhanVien(string MaNV)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            NhanVien deleteNhanVien = context.NhanViens.
+                FirstOrDefault(x => x.MaNhanVien.Trim() == MaNV.Trim());
+
+            if (deleteNhanVien != null)
+            {
+                try
+                {
+                    context.NhanViens.DeleteOnSubmit(deleteNhanVien);
+                    context.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            return -1;
+        }
         public static int DeleteData(string sql)
         {
             try
@@ -301,6 +445,7 @@ namespace QL_BanHang_LinQ.DB_Layer
                 return -1;
             }
         }
+        #endregion
         public static int InsertData(string sql)
         {
             try
