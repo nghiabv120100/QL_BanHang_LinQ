@@ -130,22 +130,14 @@ namespace QL_BanHang_LinQ.BS_Layer
         {
             if (CheckKey(hd.MaHoaDon.Trim()))
             {
-                string sql = "Insert into dbo.ChiTietHD " +
-                    $"Values('{CTHD.MaHoaDon}','{CTHD.MaHang}',{CTHD.SoLuong},'{CTHD.DonGia}',{CTHD.GiamGia},'{CTHD.ThanhTien}')";
-            
-               
-                return Query_DAL.InsertData(sql);
+                return Query_DAL.InsertChiTietHD(CTHD);
             }    
             else
             {
-                string sql = "Insert into dbo.HoaDon " +
-                $"Values('{hd.MaHoaDon}','{hd.MaNhanVien}','{hd.MaKhachHang}','{hd.NgayBan}',{hd.TongTien})";
-                Query_DAL.InsertData(sql);
+              
+                Query_DAL.InsertHoaDon(hd);
                 //
-                string sql2 = "Insert into dbo.ChiTietHD " +
-                $"Values('{CTHD.MaHoaDon}','{CTHD.MaHang}',{CTHD.SoLuong},'{CTHD.DonGia}',{CTHD.GiamGia},'{CTHD.ThanhTien}')";
-    
-                return Query_DAL.InsertData(sql2);
+                return Query_DAL.InsertChiTietHD(CTHD);
             }                
             
         }

@@ -31,10 +31,7 @@ namespace QL_BanHang_LinQ.BS_Layer
         {
             if (checkKey(LH) == true)
                 return 0;
-            string sql = "Insert into dbo.LoaiHang(MaLoaiHang,TenLoaiHang)"
-                + "Values"
-                + $"('{LH.MaLoaiHang}',N'{LH.TenLoaiHang}')";
-            return Query_DAL.InsertData(sql);
+            return Query_DAL.InsertLoaiHang(LH);
         }
         public static int DeleteLoaiHang(string MaLoaiHang)
         {

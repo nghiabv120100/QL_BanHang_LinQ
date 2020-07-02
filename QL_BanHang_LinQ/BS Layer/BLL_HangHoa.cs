@@ -32,14 +32,7 @@ namespace QL_BanHang_LinQ.BS_Layer
         {
             if (CheckKeyHH(HH.MaHang.Trim()))
                 return 0;
-                
-
-            string sql = "Insert into dbo.HangHoa(MaHang, TenHang, SoLuong,  DonGiaNhap, DonGiaBan,  Anh , "
-                + "GhiChu ,ThoiGianBaoHanh, XuatXu , LoaiHang )"
-                + "Values"
-                + $"('{HH.MaHang}',N'{HH.TenHang}',{HH.SoLuong},"
-                + $"'{HH.DonGiaNhap}','{HH.DonGiaBan}',N'{HH.Anh}',N'{HH.GhiChu }',{HH.ThoiGianBaoHanh},N'{HH.XuatXu}','{HH.LoaiHang}')";
-            return Query_DAL.InsertData(sql);
+            return Query_DAL.InsertHangHoa(HH);
         }
         private static bool CheckKeyHH(string MaHangHoa)
         {

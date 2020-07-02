@@ -16,19 +16,14 @@ namespace QL_BanHang_LinQ.BS_Layer
         {
             return Query_DAL.LayToanBoNhanVien();
         }
-        public static int InsertNhanVien(string MaNhanVien, string TenNhanVien, string DiaChi,
-            string DienThoai, string GioiTinh, string NgaySinh, string ChucVu, string Luong)
+        public static int InsertNhanVien(NhanVien nv)
         {
-            if (CheckKey(MaNhanVien))
+            if (CheckKey(nv.MaNhanVien.Trim()))
             {
                 return 0;
             }
-            string sql = $"Insert into dbo.NhanVien(MaNhanVien,TenNhanVien, DiaChi,"
-                + $"DienThoai,GioiTinh,NgaySinh,ChucVu,Luong)"
-                + $"Values"
-                + $"('{MaNhanVien}',N'{TenNhanVien}',N'{DiaChi}',"
-                + $"'{DienThoai}',N'{GioiTinh}','{NgaySinh}',N'{ChucVu}',{Luong})";
-            return Query_DAL.InsertData(sql);
+
+            return Query_DAL.InsertNhanVien(nv);
         }
         private static bool CheckKey(string MaNhanVien)
         {

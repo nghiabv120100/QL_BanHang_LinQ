@@ -427,43 +427,99 @@ namespace QL_BanHang_LinQ.DB_Layer
             }
             return -1;
         }
-        public static int DeleteData(string sql)
+        #endregion
+        #region Insert
+        public static int InsertHangHoa(HangHoa hh)
         {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
             try
             {
-                OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = sql;
-                cmd.Connection = conn;
-                int res = cmd.ExecuteNonQuery();
-                return res;
+                context.HangHoas.InsertOnSubmit(hh);
+                context.SubmitChanges();
+                return 1;
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
                 return -1;
             }
+
+        }
+        public static int InsertHoaDon(HoaDon hd)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            try
+            {
+                context.HoaDons.InsertOnSubmit(hd);
+                context.SubmitChanges();
+                return 1;
+            }
+            catch
+            {
+                return -1;
+            }
+
+        }
+        public static int InsertChiTietHD(ChiTietHD cthd)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            try
+            {
+                context.ChiTietHDs.InsertOnSubmit(cthd);
+                context.SubmitChanges();
+                return 1;
+            }
+            catch
+            {
+                return -1;
+            }
+
+        }
+        public static int InsertKhachHang(KhachHang kh)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            try
+            {
+                context.KhachHangs.InsertOnSubmit(kh);
+                context.SubmitChanges();
+                return 1;
+            }
+            catch
+            {
+                return -1;
+            }
+
+        }
+        public static int InsertLoaiHang(LoaiHang lh)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            try
+            {
+                context.LoaiHangs.InsertOnSubmit(lh);
+                context.SubmitChanges();
+                return 1;
+            }
+            catch
+            {
+                return -1;
+            }
+
+        }
+        public static int InsertNhanVien(NhanVien nv)
+        {
+            QL_BanHangDataContext context = new QL_BanHangDataContext();
+            try
+            {
+                context.NhanViens.InsertOnSubmit(nv);
+                context.SubmitChanges();
+                return 1;
+            }
+            catch
+            {
+                return -1;
+            }
+
         }
         #endregion
-        public static int InsertData(string sql)
-        {
-            try
-            {
-                OpenConnection();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = sql;
-                cmd.Connection = conn;
-                int res = cmd.ExecuteNonQuery();
-                return res;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return -1;
-            }
-        }
 
     }
 }

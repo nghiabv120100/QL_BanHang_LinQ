@@ -164,9 +164,16 @@ namespace QL_BanHang_LinQ.GUI
             if (chkNam.Checked == true)
                 gt = "Nam";
             else gt = "Nữ";
-
-            int res= BLL_NhanVien.InsertNhanVien(txtMaNhanVien.Text.Trim(), txtTenNhanVien.Text, txtDiaChi.Text,
-            mtbDienThoai.Text, gt, dtpNgaySinh.Text, txtChucVu.Text, txtLuong.Text);
+            NhanVien nv = new NhanVien();
+            nv.MaNhanVien = txtMaNhanVien.Text.Trim();
+            nv.TenNhanVien = txtTenNhanVien.Text.Trim();
+            nv.DiaChi = txtDiaChi.Text.Trim();
+            nv.DienThoai = mtbDienThoai.Text;
+            nv.NgaySinh = dtpNgaySinh.Value.Date;
+            nv.ChucVu = txtChucVu.Text;
+            nv.Luong = int.Parse(txtLuong.Text.Trim());
+            nv.GioiTinh = gt;
+            int res = BLL_NhanVien.InsertNhanVien(nv);
             if (res > 0)
             {
                 HienThiDanhSachNhanVien();

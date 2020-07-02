@@ -21,13 +21,7 @@ namespace QL_BanHang_LinQ.BS_Layer
         {
             if (CheckKeyKH(KH.MaKhachHang.Trim()))
                 return 0;
-
-            string sql = "Insert into dbo.KhachHang(MaKhachHang,TenKhachHang, DiaChi,"
-                + "DienThoai,GioiTinh,Email,NgaySinh,TongChiTieu)"
-                + "Values"
-                + $"('{KH.MaKhachHang}',N'{KH.TenKhachHang}',N'{KH.DiaChi}',"
-                + $"'{KH.DienThoai}',N'{KH.GioiTinh}',N'{KH.Email}','{KH.NgaySinh}',{KH.TongChiTieu})";
-            return Query_DAL.InsertData(sql);
+            return Query_DAL.InsertKhachHang(KH);
         }
         private static bool CheckKeyKH(string MaKhachHang)
         {
