@@ -73,7 +73,6 @@
     <Compile Include="BS Layer\BLL_LoaiHang.cs" />
     <Compile Include="BS Layer\BLL_NhanVien.cs" />
     <Compile Include="BS Layer\BLL_TaiKhoan.cs" />
-    <Compile Include="DB Layer\DAL.cs" />
     <Compile Include="DB Layer\Query_DAL.cs" />
     <Compile Include="DTO\BieuDo.cs" />
     <Compile Include="frmReport.cs">
